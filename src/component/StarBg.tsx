@@ -37,7 +37,7 @@ export const StarBg = (
     const [bgStars, setBgStar] = useState<STAR[]>(stars)
      useEffect(()=>{
         setBgStar(stars)
-     }, [stars])
+     }, [])
     return(
         <div className=" absolute z-0 inset-0  bg-zinc-900">
             {bgStars?.map((star, i)=>{
