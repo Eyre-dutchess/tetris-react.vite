@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+.board-right>*{
+    width: 100%;
+    padding-block: 1em;
+    padding-inline: 1em;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 100%, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap:0.5em;
+    
+}
+
+.cell {
+  width: 40px;
+  aspect-ratio: 1;
+  border: 1px solid hsl(0, 0%, 100%, 0.05);
+  border-radius: 4px;
+}
+
+.main-board{
+  background-color: hsl(0, 0%, 100%, 0.5) ;
+  border: 1px solid hsl(0, 0%, 100%, 0.25);
+  box-shadow: 1px 1px 0.25em 0 hsl(0, 0%, 100%, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cell.hidden {
+  visibility: hidden;
+}
+
+.cell.Empty {
+  background-color: rgba(255, 255, 255, 0.05);
+  
+}
+
+.cell.I {
+  background-color: rgb(80, 227, 230);
+  box-shadow: 0 0 12px rgba(80, 227, 230, 0.3),
+              inset 0 -2px 0 rgb(255, 255, 255, 0.8);
+}
+
+.cell.J {
+  background-color: rgb(36, 95, 223);
+  box-shadow: 0 0 12px rgba(36, 95, 223, 0.3),
+              inset 0 -2px 0 rgb(255, 255, 255, 0.8);
+}
+
+.cell.L {
+  background-color: rgb(234, 12, 197);
+  box-shadow: 0 0 12px rgba(234, 88, 12, 0.3),
+              inset 0 -2px 0 rgb(255, 255, 255, 0.8);
+}
+/* 223, 217, 36 */
+.cell.O {
+  background-color: rgb(223,217, 36);
+  box-shadow: 0 0 12px rgba(223, 217, 36, 0.3),
+              inset 0 -2px 0 rgb(255, 255, 255, 0.8);
+}
+
+.cell.S {
+  background-color: rgb(48, 211, 56);
+  box-shadow: 0 0 12px rgba(48, 211, 56, 0.3),
+              inset 0 -2px 0 rgb(255, 255, 255, 0.8);
+}
+
+.cell.T {
+  background-color: rgb(132, 61, 198);
+  box-shadow: 0 0 12px rgba(132, 61, 198, 0.3),
+              inset 0 -2px 0 rgb(255, 255, 255, 0.8);
+}
+
+.cell.Z {
+  background-color: rgb(227, 78, 78);
+  box-shadow: 0 0 12px rgba(227, 78, 78, 0.3),
+              inset 0 -2px 0 rgb(255, 255, 255, 0.8);
+}
