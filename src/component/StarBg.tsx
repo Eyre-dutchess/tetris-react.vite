@@ -1,5 +1,5 @@
 
-import {   useState } from "react";
+import {  useEffect,  useState } from "react";
 import { Star } from "./Star";
 
 type STAR ={
@@ -33,9 +33,11 @@ export const StarBg = (
         renderStar(), renderStar(),renderStar(), renderStar(),renderStar(), renderStar(),renderStar(), renderStar(),renderStar(), 
         renderStar(),renderStar(), renderStar(),renderStar(), renderStar(),
      ]
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    
     const [bgStars, setBgStar] = useState<STAR[]>(stars)
-
+     useEffect(()=>{
+        setBgStar(stars)
+     }, [stars])
     return(
         <div className=" absolute z-0 inset-0  bg-zinc-900">
             {bgStars?.map((star, i)=>{
