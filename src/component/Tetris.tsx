@@ -2,7 +2,7 @@ import {  useTetris } from "@/hooks/useTetris"
 import { MainBoard } from "./MainBoard"
 import { HighScore } from "./HighScore"
 import { UpcomingBlocks } from "./UpcomingBlocks"
-// import { StarBg } from "./StarBg"
+import { StarBg } from "./StarBg"
 import gamesong from "@/assets/tetris_theme.mp3";
 
 const gameSong = new Audio(gamesong)
@@ -13,7 +13,7 @@ export const Tetris = () => {
     return(
         <>
         <div className={`h-screen bg-black relative z-0 ${!isPlaying && "opacity-50"}`}>
-{/*             <StarBg/> */}
+            <StarBg/>
             <h1 className="relative z-40">Tetris</h1>
             <div className="h-3/4 relative z-40 min-h-[650px] bg-white/25 py-5 w-[800px] px-3 flex flex-row gap-2">
                 <UpcomingBlocks nextBlocks={upcomingBlocks}/>
